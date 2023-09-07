@@ -3,19 +3,18 @@ def auth():
     n = input(n)
 
     if 1 <= int(n) <= 1000000:
-        k = 1
-        names = []
+        names = {}
         output = []
         for i in range(int(n)):
             string = ""
             string = input(string)
             if string in names:
-                string = string + str(k)
-                names.append(string)
+                names[string] += 1
+                string = string + str(names[string])
+                names[string] = 0
                 output.append(string)
-                k += 1
             else:
-                names.append(string)
+                names[string] = 0
                 output.append("OK")
 
     for name in output:
