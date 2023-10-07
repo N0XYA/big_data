@@ -34,6 +34,7 @@ def plot_digits(data):
                   clim=(0, 16))
     plt.show()
 
+
 standardized_data = StandardScaler().fit_transform(x)
 print(standardized_data.shape)
 
