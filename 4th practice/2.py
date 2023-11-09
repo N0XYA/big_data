@@ -10,7 +10,7 @@ df = pd.read_csv("../second_practice/winequality-red.csv")
 
 corr_matrix = df.corr().quality.to_frame().round(2)
 corr_matrix.style.background_gradient(cmap='coolwarm')
-print(corr_matrix)
+# print(corr_matrix)
 y = df["quality"].values
 x = df["alcohol"].values
 
@@ -21,7 +21,7 @@ X = df[["alcohol"]]
 
 def mserror(x, w1, w0, y):
     y_pred = w1 * x + w0
-    return np.su,((y - y_pred)**2) / len(y_pred)
+    return np.sum((y - y_pred)**2) / len(y_pred)
 
 
 def gr_mserror(x, w1, w0, y):
@@ -54,17 +54,20 @@ model = LinearRegression()
 
 model.fit(X, y)
 
-print(model.coef_, model.intercept_)
+# print(model.coef_, model.intercept_)
 
 fig = plt.figure(figsize=(10, 6))
 
-x = np.arange(0, 40)
+
 our_y = next_w1 * X + next_w0
 
+print(f"наклон: {next_w0}, сдвиг: {next_w1}")
+print(f"mse: {mserror(x, next_w1, next_w0, y)}")
+x = np.arange(0, 40)
 model_a = model.coef_[0]
 model_b = model.intercept_
 sklearn_y = model_a * X + model_b
-plt.plot(X, sklearn_y, color="r")
+# plt.plot(X, sklearn_y, color="r")
 plt.plot(X, our_y, "--g")
 plt.scatter(X, y, alpha=0.7)
 plt.show()
