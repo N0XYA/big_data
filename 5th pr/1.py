@@ -14,13 +14,14 @@ data = load_wine(as_frame=True)
 predictords = data.data
 target = data.target
 target_names = data.target_names
-
 fig = go.Figure(data=[go.Bar(x = target_names, y = [len(target.loc[target == 0]), len(target.loc[target == 1]),
                                                     len(target.loc[target == 2])])])
+fig.update_layout(title="Data showcase")
 fig.show()
 
 x_train, x_test, y_train, y_test = train_test_split(predictords, target, train_size=0.8,
                                                     shuffle=True, random_state=271)
+
 print("x train", x_train.shape, "x test", x_test.shape, "y train", y_train.shape, "y test", y_test.shape)
 # REGRESSION
 model = LogisticRegression(random_state=271)
@@ -30,7 +31,7 @@ print("Predictions:\n", y_predict)
 print("Expected:\n", np.array(y_test))
 print(classification_report(y_test, y_predict))
 fig = px.imshow(confusion_matrix(y_test, y_predict), text_auto=True)
-fig.update_layout(xaxis_title = "Target", yaxis_title = "Prediction")
+fig.update_layout(title="Regression", xaxis_title = "Target", yaxis_title = "Prediction")
 fig.show()
 
 # SVM
@@ -46,7 +47,7 @@ print("Predictions:\n", svm_preds)
 print("Expected:\n", np.array(y_test))
 print(classification_report(y_test, svm_preds))
 fig = px.imshow(confusion_matrix(y_test, svm_preds), text_auto=True)
-fig.update_layout(xaxis_title = "Target", yaxis_title = "Prediction")
+fig.update_layout(title="SVM", xaxis_title = "Target", yaxis_title = "Prediction")
 fig.show()
 
 # KNN
@@ -62,5 +63,5 @@ print("Predictions:\n", knn_preds)
 print("Expected:\n", np.array(y_test))
 print(classification_report(y_test, knn_preds))
 fig = px.imshow(confusion_matrix(y_test, knn_preds), text_auto=True)
-fig.update_layout(xaxis_title = "Target", yaxis_title = "Prediction")
+fig.update_layout(title="KNN", xaxis_title = "Target", yaxis_title = "Prediction")
 fig.show()
