@@ -49,7 +49,7 @@ print(data.columns)
 #                                    mode="markers", marker_color=data["Cluster"], marker_size=4)])
 # fig.show()
 
-model3 = DBSCAN(eps=11, min_samples=5).fit(data)
+model3 = DBSCAN(eps=6, min_samples=65).fit(data)
 data["Cluster"] = model3.labels_
 fig = go.Figure(data=[go.Scatter3d(x=data['Age'], y=data["Height"], z=data["Weight"],
                                    mode="markers", marker_color=data["Cluster"], marker_size=4)])
