@@ -1,0 +1,25 @@
+<svg width="164" height="164" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1667_10452)">
+<path d="M82 142C115.137 142 142 115.137 142 82C142 48.8629 115.137 22 82 22C48.8629 22 22 48.8629 22 82C22 115.137 48.8629 142 82 142Z" fill="#E9EAF0"/>
+<rect x="33.5" y="48.5" width="97" height="19" rx="1.5" fill="white" stroke="#5D6674"/>
+<rect x="33.5" y="72.5" width="97" height="19" rx="1.5" fill="white" stroke="#5D6674"/>
+<rect x="33.5" y="96.5" width="97" height="19" rx="1.5" fill="white" stroke="#5D6674"/>
+<path d="M122 57H96C95.4477 57 95 57.4477 95 58C95 58.5523 95.4477 59 96 59H122C122.552 59 123 58.5523 123 58C123 57.4477 122.552 57 122 57Z" fill="#E1312F"/>
+<path d="M122 81H96C95.4477 81 95 81.4477 95 82C95 82.5523 95.4477 83 96 83H122C122.552 83 123 82.5523 123 82C123 81.4477 122.552 81 122 81Z" fill="#E1312F"/>
+<path d="M122 105H96C95.4477 105 95 105.448 95 106C95 106.552 95.4477 107 96 107H122C122.552 107 123 106.552 123 106C123 105.448 122.552 105 122 105Z" fill="#E1312F"/>
+<circle cx="43" cy="58" r="1.5" stroke="#5D6674"/>
+<circle cx="43" cy="82" r="1.5" stroke="#5D6674"/>
+<circle cx="43" cy="106" r="1.5" stroke="#5D6674"/>
+<circle cx="51" cy="58" r="1.5" stroke="#5D6674"/>
+<circle cx="51" cy="82" r="1.5" stroke="#5D6674"/>
+<circle cx="51" cy="106" r="1.5" stroke="#5D6674"/>
+<circle cx="59" cy="58" r="1.5" stroke="#5D6674"/>
+<circle cx="59" cy="82" r="1.5" stroke="#5D6674"/>
+<circle cx="59" cy="106" r="1.5" stroke="#5D6674"/>
+</g>
+<defs>
+<clipPath id="clip0_1667_10452">
+<rect width="164" height="164" fill="white"/>
+</clipPath>
+</defs>
+</svg>
